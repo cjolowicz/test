@@ -704,15 +704,17 @@ description = "A rewrite of the builtin doctest module"
 name = "xdoctest"
 optional = false
 python-versions = "*"
-version = "0.12.0"
+version = "0.15.0"
 
 [package.dependencies]
 six = "*"
 
 [package.extras]
-all = ["six", "pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "pybind11", "pygments", "colorama"]
-optional = ["pygments", "colorama"]
-tests = ["pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "pybind11"]
+all = ["six", "pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "pybind11", "pygments", "colorama", "nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
+colors = ["pygments", "colorama"]
+jupyter = ["nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
+optional = ["pygments", "colorama", "nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
+tests = ["pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "pybind11", "nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
 
 [[package]]
 category = "dev"
@@ -728,7 +730,8 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "a967c0e18eee4daa813e2df8a22e114ef8ecfa912b01fe281e93f5c07164922c"
+content-hash = "60b7c743a8f6fc84f1d772e21314a294a3f7d537dfc87381f9b4b91fd419c580"
+lock-version = "1.0"
 python-versions = "^3.6.1"
 
 [metadata.files]
@@ -916,6 +919,7 @@ mypy-extensions = [
 ]
 nodeenv = [
     {file = "nodeenv-1.4.0-py2.py3-none-any.whl", hash = "sha256:4b0b77afa3ba9b54f4b6396e60b0c83f59eaeb2d63dc3cc7a70f7f4af96c82bc"},
+    {file = "nodeenv-1.4.0.tar.gz", hash = "sha256:26941644654d8dd5378720e38f62a3bac5f9240811fb3b8913d2663a17baa91c"},
 ]
 packaging = [
     {file = "packaging-20.4-py2.py3-none-any.whl", hash = "sha256:998416ba6962ae7fbd6596850b80e17859a5753ba17c32284f67bfff33784181"},
@@ -1079,8 +1083,8 @@ wcwidth = [
     {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
 ]
 xdoctest = [
-    {file = "xdoctest-0.12.0-py2.py3-none-any.whl", hash = "sha256:82424d2cc4b6d6b96b7b7134c81e97a4594c536547c1954533128a6a26cf1cb2"},
-    {file = "xdoctest-0.12.0.tar.gz", hash = "sha256:2d985d8d78d4444079d3b072965327ab06a5e6dcb4882f3561d7596eb4da6b13"},
+    {file = "xdoctest-0.15.0-py2.py3-none-any.whl", hash = "sha256:695ea04303a48cbb319709270d43f7bae7f3de3701aec73f09d90a216499992e"},
+    {file = "xdoctest-0.15.0.tar.gz", hash = "sha256:7f0a184d403b69b166ebec1aadb13c98c96c59101e974ae2e4db4c3a803ec371"},
 ]
 zipp = [
     {file = "zipp-3.1.0-py3-none-any.whl", hash = "sha256:aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b"},
